@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-cat .gitignore | xargs -I{} sh -c "ls -1 {}" | xargs rm -f dummy
+./clean.sh
 
 gcc --coverage -o test main.c sub.c
 ls -l
